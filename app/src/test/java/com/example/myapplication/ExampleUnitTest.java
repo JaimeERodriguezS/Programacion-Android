@@ -1,4 +1,4 @@
-package com.example.ciclo;
+package com.example.myapplication;
 
 import org.junit.Test;
 
