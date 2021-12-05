@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:menu="@menu/main_menu">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del Sensor">
+
+        <EditText
+            android:id="@+id/nom_sensor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Nombre del sensor"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingTop="20dp"
+            tools:ignore="EditableContentDescCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tipo de sensor">
+
+        <EditText
+            android:id="@+id/tipo_sensor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Tipo de Sensor"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingTop="20dp"
+            tools:ignore="EditableContentDescCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Valor del Sensor">
+
+        <EditText
+            android:id="@+id/valor_sensor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Valor del Sensor"
+            android:ems="10"
+            android:inputType="text"
+            android:paddingTop="20dp"
+            tools:ignore="EditableContentDescCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ubicacion del Sensor">
+
+        <EditText
+            android:id="@+id/ubi_sensor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="ubicacion del sensor"
+            android:ems="10"
+            android:inputType="text"
+            android:paddingTop="20dp"
+            tools:ignore="EditableContentDescCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Observaccion">
+
+        <EditText
+            android:id="@+id/observacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="observacion"
+            android:ems="10"
+            android:inputType="text"
+            android:paddingTop="20dp"
+            tools:ignore="EditableContentDescCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnMQ"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:text="IR A MQTT" />
+
+    <ListView
+        android:id="@+id/list_sensor"
+        android:layout_width="match_parent"
+        android:layout_height="390dp" />
+
+
+
+</LinearLayout>
