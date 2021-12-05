@@ -1,7 +1,8 @@
 package com.jaimerodriguez.prueba_android3;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import org.eclipse.paho.android.service.MqttAndroidClient;
+import org.eclipse.paho.client.mqttv3.*;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -126,5 +127,20 @@ public class MainMqtt extends AppCompatActivity {
         } catch (MqttException ex) {
             ex.printStackTrace();
         }
+
+
     }
+    public void published(View v){
+
+        String topic = "sensores";
+        String message = "nombre_sensor' : 'sensor01H', 'tipo':'humedad', 'valor': 45.7, 'ubicacion': 'pabellón04', 'fecha-hora':'2021-11-30 14:00','observ': 'Arduino 07' ";
+        try {
+            mqttAndroidClient.publish(topic, message.getBytes(),0,false);
+            Toast.makeText(this,"Published Message",Toast.LENGTH_SHORT).show();
+        } catch ( MqttException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 }
